@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Nat.zero_add",
+    "binders": "(n : Nat)",
+    "target": "0 + n = n"
+  },
+  {
+    "name": "Nat.zero_mul",
+    "binders": "(n : Nat)",
+    "target": "0 * n = 0"
+  },
+  {
+    "name": "List.append_nil",
+    "binders": "(α : Type) (xs : List α)",
+    "target": "xs ++ [] = xs"
+  },
+  {
+    "name": "List.length_append",
+    "binders": "(α : Type) (xs ys : List α)",
+    "target": "(xs ++ ys).length = xs.length + ys.length"
+  },
+  {
+    "name": "List.map_id",
+    "binders": "(α : Type) (xs : List α)",
+    "target": "xs.map id = xs"
+  },
+  {
+    "name": "List.reverse_reverse",
+    "binders": "(α : Type) (xs : List α)",
+    "target": "xs.reverse.reverse = xs"
+  },
+  {
+    "name": "List.reverse_append",
+    "binders": "(α : Type) (xs ys : List α)",
+    "target": "(xs ++ ys).reverse = ys.reverse ++ xs.reverse"
+  },
+  {
+    "name": "List.map_append",
+    "binders": "(α β : Type) (f : α → β) (xs ys : List α)",
+    "target": "(xs ++ ys).map f = xs.map f ++ ys.map f"
+  },
+  {
+    "name": "List.length_reverse",
+    "binders": "(α : Type) (xs : List α)",
+    "target": "xs.reverse.length = xs.length"
+  },
+  {
+    "name": "List.length_map",
+    "binders": "(α β : Type) (f : α → β) (xs : List α)",
+    "target": "(xs.map f).length = xs.length"
+  },
+  {
+    "name": "List.map_map",
+    "binders": "(α β γ : Type) (f : α → β) (g : β → γ) (xs : List α)",
+    "target": "(xs.map f).map g = xs.map (g ∘ f)"
+  },
+  {
+    "name": "Array.size_append",
+    "binders": "(α : Type) (xs ys : Array α)",
+    "target": "(xs ++ ys).size = xs.size + ys.size"
+  },
+  {
+    "name": "Array.map_map",
+    "binders": "(α β γ : Type) (f : α → β) (g : β → γ) (xs : Array α)",
+    "target": "(xs.map f).map g = xs.map (g ∘ f)"
+  },
+  {
+    "name": "String.length_append",
+    "binders": "(s t : String)",
+    "target": "(s ++ t).length = s.length + t.length"
+  },
+  {
+    "name": "Option.map_id_fun",
+    "binders": "(α : Type)",
+    "target": "Option.map (id : α → α) = id"
+  }
+]

@@ -1,0 +1,521 @@
+{
+  "summary": {
+    "records": 45,
+    "replay_label_agreements": 45,
+    "compiler_version": "Lean (version 4.15.0, arm64-apple-darwin23.6.0, commit 11651562caae, Release)",
+    "flip_pairs": 11,
+    "correct_flip_direction": 10,
+    "both_classifications_correct": 6,
+    "specific_direction": 3,
+    "correct": 24,
+    "warning": "Post-observation source-format check on same hand-selected OOD seeds; not independent held-out replication. No new threshold fitted."
+  },
+  "triples": [
+    {
+      "seed": "Array.map_map",
+      "baseline_p": 0.7867648601531982,
+      "relevant_p": 0.721933901309967,
+      "unrelated_p": 0.6269399523735046,
+      "correct_flip_direction": true,
+      "both_classifications_correct": false,
+      "specific_direction": false
+    },
+    {
+      "seed": "Array.size_append",
+      "baseline_p": 0.3417121171951294,
+      "relevant_p": 0.12854398787021637,
+      "unrelated_p": 0.06386248767375946,
+      "correct_flip_direction": true,
+      "both_classifications_correct": false,
+      "specific_direction": false
+    },
+    {
+      "seed": "List.length_append",
+      "baseline_p": 0.5226249098777771,
+      "relevant_p": 0.06714776158332825,
+      "unrelated_p": 0.031032199040055275,
+      "correct_flip_direction": true,
+      "both_classifications_correct": true,
+      "specific_direction": false
+    },
+    {
+      "seed": "List.length_map",
+      "baseline_p": 0.5015084743499756,
+      "relevant_p": 0.117615707218647,
+      "unrelated_p": 0.07504858076572418,
+      "correct_flip_direction": true,
+      "both_classifications_correct": true,
+      "specific_direction": false
+    },
+    {
+      "seed": "List.length_reverse",
+      "baseline_p": 0.7021117210388184,
+      "relevant_p": 0.18815791606903076,
+      "unrelated_p": 0.11754477769136429,
+      "correct_flip_direction": true,
+      "both_classifications_correct": true,
+      "specific_direction": false
+    },
+    {
+      "seed": "List.map_append",
+      "baseline_p": 0.5738332867622375,
+      "relevant_p": 0.40051203966140747,
+      "unrelated_p": 0.46410736441612244,
+      "correct_flip_direction": true,
+      "both_classifications_correct": true,
+      "specific_direction": true
+    },
+    {
+      "seed": "List.map_map",
+      "baseline_p": 0.7192665338516235,
+      "relevant_p": 0.5844764113426208,
+      "unrelated_p": 0.5938611626625061,
+      "correct_flip_direction": true,
+      "both_classifications_correct": false,
+      "specific_direction": true
+    },
+    {
+      "seed": "List.reverse_reverse",
+      "baseline_p": 0.8773777484893799,
+      "relevant_p": 0.9110512137413025,
+      "unrelated_p": 0.6212756633758545,
+      "correct_flip_direction": false,
+      "both_classifications_correct": false,
+      "specific_direction": false
+    },
+    {
+      "seed": "Nat.zero_mul",
+      "baseline_p": 0.7388776540756226,
+      "relevant_p": 0.17597049474716187,
+      "unrelated_p": 0.18867774307727814,
+      "correct_flip_direction": true,
+      "both_classifications_correct": true,
+      "specific_direction": true
+    },
+    {
+      "seed": "Option.map_id_fun",
+      "baseline_p": 0.45726126432418823,
+      "relevant_p": 0.22854892909526825,
+      "unrelated_p": 0.09129436314105988,
+      "correct_flip_direction": true,
+      "both_classifications_correct": false,
+      "specific_direction": false
+    },
+    {
+      "seed": "String.length_append",
+      "baseline_p": 0.6976085305213928,
+      "relevant_p": 0.2821369171142578,
+      "unrelated_p": 0.09361029416322708,
+      "correct_flip_direction": true,
+      "both_classifications_correct": true,
+      "specific_direction": false
+    }
+  ],
+  "rows": [
+    {
+      "seed": "Nat.zero_add",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (n : Nat) : 0 + n = n := by\n  simp\n",
+      "source_file": "Nat_zero_add__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.47338423132896423,
+      "predicted_valid": false
+    },
+    {
+      "seed": "Nat.zero_add",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.zero_add\n\ntheorem target (n : Nat) : 0 + n = n := by\n  simp\n",
+      "source_file": "Nat_zero_add__remove_relevant__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.164476677775383,
+      "predicted_valid": false
+    },
+    {
+      "seed": "Nat.zero_add",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (n : Nat) : 0 + n = n := by\n  simp\n",
+      "source_file": "Nat_zero_add__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.1698903739452362,
+      "predicted_valid": false
+    },
+    {
+      "seed": "Nat.zero_mul",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (n : Nat) : 0 * n = 0 := by\n  simp\n",
+      "source_file": "Nat_zero_mul__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.7388776540756226,
+      "predicted_valid": true
+    },
+    {
+      "seed": "Nat.zero_mul",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.zero_mul\n\ntheorem target (n : Nat) : 0 * n = 0 := by\n  simp\n",
+      "source_file": "Nat_zero_mul__remove_relevant__automatic__no_print.lean",
+      "accepted": false,
+      "probability_valid": 0.17597049474716187,
+      "predicted_valid": false
+    },
+    {
+      "seed": "Nat.zero_mul",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (n : Nat) : 0 * n = 0 := by\n  simp\n",
+      "source_file": "Nat_zero_mul__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.18867774307727814,
+      "predicted_valid": false
+    },
+    {
+      "seed": "List.append_nil",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (\u03b1 : Type) (xs : List \u03b1) : xs ++ [] = xs := by\n  simp\n",
+      "source_file": "List_append_nil__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.8091397285461426,
+      "predicted_valid": true
+    },
+    {
+      "seed": "List.append_nil",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] List.append_nil\n\ntheorem target (\u03b1 : Type) (xs : List \u03b1) : xs ++ [] = xs := by\n  simp\n",
+      "source_file": "List_append_nil__remove_relevant__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.6962769031524658,
+      "predicted_valid": true
+    },
+    {
+      "seed": "List.append_nil",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (\u03b1 : Type) (xs : List \u03b1) : xs ++ [] = xs := by\n  simp\n",
+      "source_file": "List_append_nil__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.5399395823478699,
+      "predicted_valid": true
+    },
+    {
+      "seed": "List.length_append",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (\u03b1 : Type) (xs ys : List \u03b1) : (xs ++ ys).length = xs.length + ys.length := by\n  simp\n",
+      "source_file": "List_length_append__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.5226249098777771,
+      "predicted_valid": true
+    },
+    {
+      "seed": "List.length_append",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] List.length_append\n\ntheorem target (\u03b1 : Type) (xs ys : List \u03b1) : (xs ++ ys).length = xs.length + ys.length := by\n  simp\n",
+      "source_file": "List_length_append__remove_relevant__automatic__no_print.lean",
+      "accepted": false,
+      "probability_valid": 0.06714776158332825,
+      "predicted_valid": false
+    },
+    {
+      "seed": "List.length_append",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (\u03b1 : Type) (xs ys : List \u03b1) : (xs ++ ys).length = xs.length + ys.length := by\n  simp\n",
+      "source_file": "List_length_append__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.031032199040055275,
+      "predicted_valid": false
+    },
+    {
+      "seed": "List.map_id",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (\u03b1 : Type) (xs : List \u03b1) : xs.map id = xs := by\n  simp\n",
+      "source_file": "List_map_id__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.4354000389575958,
+      "predicted_valid": false
+    },
+    {
+      "seed": "List.map_id",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] List.map_id\n\ntheorem target (\u03b1 : Type) (xs : List \u03b1) : xs.map id = xs := by\n  simp\n",
+      "source_file": "List_map_id__remove_relevant__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.07697739452123642,
+      "predicted_valid": false
+    },
+    {
+      "seed": "List.map_id",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (\u03b1 : Type) (xs : List \u03b1) : xs.map id = xs := by\n  simp\n",
+      "source_file": "List_map_id__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.08655651658773422,
+      "predicted_valid": false
+    },
+    {
+      "seed": "List.reverse_reverse",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (\u03b1 : Type) (xs : List \u03b1) : xs.reverse.reverse = xs := by\n  simp\n",
+      "source_file": "List_reverse_reverse__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.8773777484893799,
+      "predicted_valid": true
+    },
+    {
+      "seed": "List.reverse_reverse",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] List.reverse_reverse\n\ntheorem target (\u03b1 : Type) (xs : List \u03b1) : xs.reverse.reverse = xs := by\n  simp\n",
+      "source_file": "List_reverse_reverse__remove_relevant__automatic__no_print.lean",
+      "accepted": false,
+      "probability_valid": 0.9110512137413025,
+      "predicted_valid": true
+    },
+    {
+      "seed": "List.reverse_reverse",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (\u03b1 : Type) (xs : List \u03b1) : xs.reverse.reverse = xs := by\n  simp\n",
+      "source_file": "List_reverse_reverse__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.6212756633758545,
+      "predicted_valid": true
+    },
+    {
+      "seed": "List.reverse_append",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (\u03b1 : Type) (xs ys : List \u03b1) : (xs ++ ys).reverse = ys.reverse ++ xs.reverse := by\n  simp\n",
+      "source_file": "List_reverse_append__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.8168166279792786,
+      "predicted_valid": true
+    },
+    {
+      "seed": "List.reverse_append",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] List.reverse_append\n\ntheorem target (\u03b1 : Type) (xs ys : List \u03b1) : (xs ++ ys).reverse = ys.reverse ++ xs.reverse := by\n  simp\n",
+      "source_file": "List_reverse_append__remove_relevant__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.46477600932121277,
+      "predicted_valid": false
+    },
+    {
+      "seed": "List.reverse_append",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (\u03b1 : Type) (xs ys : List \u03b1) : (xs ++ ys).reverse = ys.reverse ++ xs.reverse := by\n  simp\n",
+      "source_file": "List_reverse_append__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.19617992639541626,
+      "predicted_valid": false
+    },
+    {
+      "seed": "List.map_append",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (\u03b1 \u03b2 : Type) (f : \u03b1 \u2192 \u03b2) (xs ys : List \u03b1) : (xs ++ ys).map f = xs.map f ++ ys.map f := by\n  simp\n",
+      "source_file": "List_map_append__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.5738332867622375,
+      "predicted_valid": true
+    },
+    {
+      "seed": "List.map_append",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] List.map_append\n\ntheorem target (\u03b1 \u03b2 : Type) (f : \u03b1 \u2192 \u03b2) (xs ys : List \u03b1) : (xs ++ ys).map f = xs.map f ++ ys.map f := by\n  simp\n",
+      "source_file": "List_map_append__remove_relevant__automatic__no_print.lean",
+      "accepted": false,
+      "probability_valid": 0.40051203966140747,
+      "predicted_valid": false
+    },
+    {
+      "seed": "List.map_append",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (\u03b1 \u03b2 : Type) (f : \u03b1 \u2192 \u03b2) (xs ys : List \u03b1) : (xs ++ ys).map f = xs.map f ++ ys.map f := by\n  simp\n",
+      "source_file": "List_map_append__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.46410736441612244,
+      "predicted_valid": false
+    },
+    {
+      "seed": "List.length_reverse",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (\u03b1 : Type) (xs : List \u03b1) : xs.reverse.length = xs.length := by\n  simp\n",
+      "source_file": "List_length_reverse__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.7021117210388184,
+      "predicted_valid": true
+    },
+    {
+      "seed": "List.length_reverse",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] List.length_reverse\n\ntheorem target (\u03b1 : Type) (xs : List \u03b1) : xs.reverse.length = xs.length := by\n  simp\n",
+      "source_file": "List_length_reverse__remove_relevant__automatic__no_print.lean",
+      "accepted": false,
+      "probability_valid": 0.18815791606903076,
+      "predicted_valid": false
+    },
+    {
+      "seed": "List.length_reverse",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (\u03b1 : Type) (xs : List \u03b1) : xs.reverse.length = xs.length := by\n  simp\n",
+      "source_file": "List_length_reverse__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.11754477769136429,
+      "predicted_valid": false
+    },
+    {
+      "seed": "List.length_map",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (\u03b1 \u03b2 : Type) (f : \u03b1 \u2192 \u03b2) (xs : List \u03b1) : (xs.map f).length = xs.length := by\n  simp\n",
+      "source_file": "List_length_map__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.5015084743499756,
+      "predicted_valid": true
+    },
+    {
+      "seed": "List.length_map",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] List.length_map\n\ntheorem target (\u03b1 \u03b2 : Type) (f : \u03b1 \u2192 \u03b2) (xs : List \u03b1) : (xs.map f).length = xs.length := by\n  simp\n",
+      "source_file": "List_length_map__remove_relevant__automatic__no_print.lean",
+      "accepted": false,
+      "probability_valid": 0.117615707218647,
+      "predicted_valid": false
+    },
+    {
+      "seed": "List.length_map",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (\u03b1 \u03b2 : Type) (f : \u03b1 \u2192 \u03b2) (xs : List \u03b1) : (xs.map f).length = xs.length := by\n  simp\n",
+      "source_file": "List_length_map__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.07504858076572418,
+      "predicted_valid": false
+    },
+    {
+      "seed": "List.map_map",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (\u03b1 \u03b2 \u03b3 : Type) (f : \u03b1 \u2192 \u03b2) (g : \u03b2 \u2192 \u03b3) (xs : List \u03b1) : (xs.map f).map g = xs.map (g \u2218 f) := by\n  simp\n",
+      "source_file": "List_map_map__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.7192665338516235,
+      "predicted_valid": true
+    },
+    {
+      "seed": "List.map_map",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] List.map_map\n\ntheorem target (\u03b1 \u03b2 \u03b3 : Type) (f : \u03b1 \u2192 \u03b2) (g : \u03b2 \u2192 \u03b3) (xs : List \u03b1) : (xs.map f).map g = xs.map (g \u2218 f) := by\n  simp\n",
+      "source_file": "List_map_map__remove_relevant__automatic__no_print.lean",
+      "accepted": false,
+      "probability_valid": 0.5844764113426208,
+      "predicted_valid": true
+    },
+    {
+      "seed": "List.map_map",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (\u03b1 \u03b2 \u03b3 : Type) (f : \u03b1 \u2192 \u03b2) (g : \u03b2 \u2192 \u03b3) (xs : List \u03b1) : (xs.map f).map g = xs.map (g \u2218 f) := by\n  simp\n",
+      "source_file": "List_map_map__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.5938611626625061,
+      "predicted_valid": true
+    },
+    {
+      "seed": "Array.size_append",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (\u03b1 : Type) (xs ys : Array \u03b1) : (xs ++ ys).size = xs.size + ys.size := by\n  simp\n",
+      "source_file": "Array_size_append__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.3417121171951294,
+      "predicted_valid": false
+    },
+    {
+      "seed": "Array.size_append",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Array.size_append\n\ntheorem target (\u03b1 : Type) (xs ys : Array \u03b1) : (xs ++ ys).size = xs.size + ys.size := by\n  simp\n",
+      "source_file": "Array_size_append__remove_relevant__automatic__no_print.lean",
+      "accepted": false,
+      "probability_valid": 0.12854398787021637,
+      "predicted_valid": false
+    },
+    {
+      "seed": "Array.size_append",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (\u03b1 : Type) (xs ys : Array \u03b1) : (xs ++ ys).size = xs.size + ys.size := by\n  simp\n",
+      "source_file": "Array_size_append__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.06386248767375946,
+      "predicted_valid": false
+    },
+    {
+      "seed": "Array.map_map",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (\u03b1 \u03b2 \u03b3 : Type) (f : \u03b1 \u2192 \u03b2) (g : \u03b2 \u2192 \u03b3) (xs : Array \u03b1) : (xs.map f).map g = xs.map (g \u2218 f) := by\n  simp\n",
+      "source_file": "Array_map_map__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.7867648601531982,
+      "predicted_valid": true
+    },
+    {
+      "seed": "Array.map_map",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Array.map_map\n\ntheorem target (\u03b1 \u03b2 \u03b3 : Type) (f : \u03b1 \u2192 \u03b2) (g : \u03b2 \u2192 \u03b3) (xs : Array \u03b1) : (xs.map f).map g = xs.map (g \u2218 f) := by\n  simp\n",
+      "source_file": "Array_map_map__remove_relevant__automatic__no_print.lean",
+      "accepted": false,
+      "probability_valid": 0.721933901309967,
+      "predicted_valid": true
+    },
+    {
+      "seed": "Array.map_map",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (\u03b1 \u03b2 \u03b3 : Type) (f : \u03b1 \u2192 \u03b2) (g : \u03b2 \u2192 \u03b3) (xs : Array \u03b1) : (xs.map f).map g = xs.map (g \u2218 f) := by\n  simp\n",
+      "source_file": "Array_map_map__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.6269399523735046,
+      "predicted_valid": true
+    },
+    {
+      "seed": "String.length_append",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (s t : String) : (s ++ t).length = s.length + t.length := by\n  simp\n",
+      "source_file": "String_length_append__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.6976085305213928,
+      "predicted_valid": true
+    },
+    {
+      "seed": "String.length_append",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] String.length_append\n\ntheorem target (s t : String) : (s ++ t).length = s.length + t.length := by\n  simp\n",
+      "source_file": "String_length_append__remove_relevant__automatic__no_print.lean",
+      "accepted": false,
+      "probability_valid": 0.2821369171142578,
+      "predicted_valid": false
+    },
+    {
+      "seed": "String.length_append",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (s t : String) : (s ++ t).length = s.length + t.length := by\n  simp\n",
+      "source_file": "String_length_append__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.09361029416322708,
+      "predicted_valid": false
+    },
+    {
+      "seed": "Option.map_id_fun",
+      "condition": "baseline",
+      "model_input": "import Lean\nimport Std\n\n\ntheorem target (\u03b1 : Type) : Option.map (id : \u03b1 \u2192 \u03b1) = id := by\n  simp\n",
+      "source_file": "Option_map_id_fun__baseline__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.45726126432418823,
+      "predicted_valid": false
+    },
+    {
+      "seed": "Option.map_id_fun",
+      "condition": "remove_relevant",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Option.map_id_fun\n\ntheorem target (\u03b1 : Type) : Option.map (id : \u03b1 \u2192 \u03b1) = id := by\n  simp\n",
+      "source_file": "Option_map_id_fun__remove_relevant__automatic__no_print.lean",
+      "accepted": false,
+      "probability_valid": 0.22854892909526825,
+      "predicted_valid": false
+    },
+    {
+      "seed": "Option.map_id_fun",
+      "condition": "remove_unrelated",
+      "model_input": "import Lean\nimport Std\n\nattribute [-simp] Nat.add_zero\n\ntheorem target (\u03b1 : Type) : Option.map (id : \u03b1 \u2192 \u03b1) = id := by\n  simp\n",
+      "source_file": "Option_map_id_fun__remove_unrelated__automatic__no_print.lean",
+      "accepted": true,
+      "probability_valid": 0.09129436314105988,
+      "predicted_valid": false
+    }
+  ]
+}

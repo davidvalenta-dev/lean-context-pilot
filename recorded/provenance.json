@@ -1,0 +1,19 @@
+{
+  "experiment_dates": [
+    "2026-11-12",
+    "2026-11-13"
+  ],
+  "source_artifact": "model-format-control.json",
+  "source_artifact_sha256": "0181dd1504611836400931a561f92126c9a13956cbbf0ecfa4ca2410b6ffc0b9",
+  "model_id": "EPFL-LARA/lean-encoder-modernbert-large",
+  "model_revision": "1b6fcc6dc53f237abc0226744b79ee3b86ec8e98",
+  "model_weights_sha256": "639650538acf847506e10c8c47cef8b55f2ccbd1acc45a8c565b1153907b2d18",
+  "preprocessing_sha256": "13456747109930b96aed84fe6f705b33b254154d0f29a13e751f432f728c823c",
+  "lean": "leanprover/lean4:v4.15.0",
+  "python": "3.12.14",
+  "torch": "2.15.0",
+  "transformers": "4.57.3",
+  "device": "cpu",
+  "dtype": "float32",
+  "note": "AI-assisted exploratory experiment. Hand-selected Std-library fixtures, not a reproduction of the published miniF2F/ProofNet benchmark. No model training or proof-search integration."
+}

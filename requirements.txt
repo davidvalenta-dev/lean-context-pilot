@@ -1,0 +1,4 @@
+# Optional: only needed for model scoring. Summary and Lean replay use the standard library.
+torch==2.15.0
+transformers==4.57.3
+huggingface-hub==0.36.2
